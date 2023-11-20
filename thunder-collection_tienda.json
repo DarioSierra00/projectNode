@@ -1,0 +1,1744 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "tienda",
+    "dateExported": "2023-11-20T09:05:52.653Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "2b89f478-7ff1-4159-aa41-e44da543f532",
+            "name": "marca",
+            "containerId": "",
+            "created": "2023-11-20T07:08:01.994Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "378b92f8-650d-479b-9576-1df9c4da8590",
+            "name": "cliente",
+            "containerId": "",
+            "created": "2023-11-20T07:08:01.995Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "630e12ba-a50d-43ee-8cf4-7e4b10e0284d",
+            "name": "producto",
+            "containerId": "",
+            "created": "2023-11-20T07:08:01.996Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "043a5771-6497-4b03-8218-9ce8b18e200e",
+            "name": "OK",
+            "containerId": "2b89f478-7ff1-4159-aa41-e44da543f532",
+            "created": "2023-11-20T07:08:01.997Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "322c767b-fe29-4bce-89e7-b5221b5e3451",
+            "name": "KO",
+            "containerId": "2b89f478-7ff1-4159-aa41-e44da543f532",
+            "created": "2023-11-20T07:08:01.998Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "0fb13074-e887-4ebf-9b17-eedc575e50cb",
+            "name": "OK",
+            "containerId": "378b92f8-650d-479b-9576-1df9c4da8590",
+            "created": "2023-11-20T07:08:01.999Z",
+            "sortNum": 90000
+        },
+        {
+            "_id": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "KO",
+            "containerId": "378b92f8-650d-479b-9576-1df9c4da8590",
+            "created": "2023-11-20T07:08:02.000Z",
+            "sortNum": 100000
+        },
+        {
+            "_id": "35f93da4-97bd-4ef9-bb78-2422be97a13d",
+            "name": "OK",
+            "containerId": "630e12ba-a50d-43ee-8cf4-7e4b10e0284d",
+            "created": "2023-11-20T07:08:02.001Z",
+            "sortNum": 110000
+        },
+        {
+            "_id": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "KO",
+            "containerId": "630e12ba-a50d-43ee-8cf4-7e4b10e0284d",
+            "created": "2023-11-20T07:08:02.002Z",
+            "sortNum": 120000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d3903dca-e9e7-4a28-acb3-221d8f446859",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "043a5771-6497-4b03-8218-9ce8b18e200e",
+            "name": "addMarca",
+            "url": "http://localhost3000/marca",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-20T07:08:01.995Z",
+            "modified": "2023-11-20T07:08:01.995Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\" : \"Nike\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "1fbae54a-44e9-4137-a471-afdbec73fa79",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "322c767b-fe29-4bce-89e7-b5221b5e3451",
+            "name": "addMarca",
+            "url": "http://localhost3000/marca",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-20T07:08:01.996Z",
+            "modified": "2023-11-20T07:08:01.996Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\" : \"\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "3ddbe26f-f015-4a44-a692-090c94018c88",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "043a5771-6497-4b03-8218-9ce8b18e200e",
+            "name": "getMarca",
+            "url": "http://localhost3000/marca",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-11-20T07:08:01.997Z",
+            "modified": "2023-11-20T07:08:01.997Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                },
+                {
+                    "type": "Content-Length",
+                    "custom": "",
+                    "action": ">",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "_id": "3238142d-5b0f-4083-b45d-3141309329c0",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "322c767b-fe29-4bce-89e7-b5221b5e3451",
+            "name": "addMarca2",
+            "url": "http://localhost3000/marca",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-11-20T07:08:02.003Z",
+            "modified": "2023-11-20T07:08:02.003Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\" : 23\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                }
+            ]
+        },
+        {
+            "_id": "9e1ff1c0-d926-4f1b-913a-eeb5fceb647c",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "043a5771-6497-4b03-8218-9ce8b18e200e",
+            "name": "editMarca",
+            "url": "http://localhost3000/marca/1",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-11-20T07:08:01.998Z",
+            "modified": "2023-11-20T07:08:01.998Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\" = \"Adidas\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "c0a7d131-91ab-416b-ba37-dd72ceabf73f",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "043a5771-6497-4b03-8218-9ce8b18e200e",
+            "name": "deleteMarca",
+            "url": "http://localhost3000/marca/1",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-11-20T07:08:01.999Z",
+            "modified": "2023-11-20T07:08:01.999Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "40a977b0-519d-4571-b398-d4273a8f5208",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "322c767b-fe29-4bce-89e7-b5221b5e3451",
+            "name": "getMarca",
+            "url": "http://localhost3000/marca/99",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-11-20T07:08:02.000Z",
+            "modified": "2023-11-20T07:08:02.000Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "983e4a43-7c89-46bd-b19e-ef05ae44e3d8",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "322c767b-fe29-4bce-89e7-b5221b5e3451",
+            "name": "editMarcaKO",
+            "url": "http://localhost3000/marca/99",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2023-11-20T07:08:02.001Z",
+            "modified": "2023-11-20T07:08:02.001Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\" : 23\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "8626ca5f-0f2a-40f8-b76c-455f080a25b4",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "322c767b-fe29-4bce-89e7-b5221b5e3451",
+            "name": "editMarcaKO2",
+            "url": "http://localhost3000/marca/1",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2023-11-20T07:08:02.002Z",
+            "modified": "2023-11-20T07:08:02.002Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\" : 23\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "b2df0607-d4da-4af7-afd8-859c56114e22",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "322c767b-fe29-4bce-89e7-b5221b5e3451",
+            "name": "deleteMarcaKO",
+            "url": "http://localhost3000/marca/ff",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2023-11-20T07:08:02.004Z",
+            "modified": "2023-11-20T07:08:02.004Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                }
+            ]
+        },
+        {
+            "_id": "743391d9-aa88-4316-bb44-19d22ebbf661",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "0fb13074-e887-4ebf-9b17-eedc575e50cb",
+            "name": "getClienteId",
+            "url": "http://localhost3000/cliente/1",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2023-11-20T07:08:02.005Z",
+            "modified": "2023-11-20T07:08:02.005Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "8d7f4125-7347-47d9-ba5a-10f3933610a1",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "0fb13074-e887-4ebf-9b17-eedc575e50cb",
+            "name": "getClientes",
+            "url": "http://localhost3000/cliente",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2023-11-20T07:08:02.006Z",
+            "modified": "2023-11-20T07:08:02.006Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "df366404-3c01-4b2a-b9be-72ccf1461b8a",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "0fb13074-e887-4ebf-9b17-eedc575e50cb",
+            "name": "addCliente",
+            "url": "http://localhost3000/cliente",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2023-11-20T07:08:02.007Z",
+            "modified": "2023-11-20T07:08:02.007Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luis\",\n  \"genero\" : \"Masculino\",\n  \"edad\" : 20\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "8ee58a52-b729-4b06-8807-252599d38a73",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "0fb13074-e887-4ebf-9b17-eedc575e50cb",
+            "name": "editCliente",
+            "url": "http://localhost3000/cliente/1",
+            "method": "PUT",
+            "sortNum": 220000,
+            "created": "2023-11-20T07:08:02.008Z",
+            "modified": "2023-11-20T07:08:02.008Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luisa\",\n  \"genero\" : \"Masculino\",\n  \"edad\" : 20\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "261c16d2-42fa-4f9c-a650-872ed4b9db3b",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "0fb13074-e887-4ebf-9b17-eedc575e50cb",
+            "name": "deleteCliente",
+            "url": "http://localhost3000/cliente/1",
+            "method": "DELETE",
+            "sortNum": 230000,
+            "created": "2023-11-20T07:08:02.009Z",
+            "modified": "2023-11-20T07:08:02.009Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "3e89611b-29b8-4772-91b9-477640864ba0",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "0fb13074-e887-4ebf-9b17-eedc575e50cb",
+            "name": "editCliente2",
+            "url": "http://localhost3000/cliente/1",
+            "method": "PUT",
+            "sortNum": 240000,
+            "created": "2023-11-20T07:08:02.010Z",
+            "modified": "2023-11-20T07:08:02.010Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luisa\",\n  \"genero\" : \"Femenino\",\n  \"edad\" : 20\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "f265d760-a238-4543-af48-b584d8c30691",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "0fb13074-e887-4ebf-9b17-eedc575e50cb",
+            "name": "editCliente3",
+            "url": "http://localhost3000/cliente/1",
+            "method": "PUT",
+            "sortNum": 250000,
+            "created": "2023-11-20T07:08:02.011Z",
+            "modified": "2023-11-20T07:08:02.011Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luisa\",\n  \"genero\" : \"Masculino\",\n  \"edad\" : 21\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "9ad955b8-ca2a-48dd-99f8-068d391b3621",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "getCliente",
+            "url": "http://localhost3000/cliente/fed",
+            "method": "GET",
+            "sortNum": 260000,
+            "created": "2023-11-20T07:08:02.012Z",
+            "modified": "2023-11-20T07:08:02.012Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "9d535674-6592-443b-aeff-207f243b93c0",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "addCliente",
+            "url": "http://localhost3000/cliente",
+            "method": "POST",
+            "sortNum": 270000,
+            "created": "2023-11-20T07:08:02.013Z",
+            "modified": "2023-11-20T07:08:02.013Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : 20,\n  \"genero\" : \"Masculino\",\n  \"edad\" : 20\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "055232b4-1ac9-4f40-859e-1800aa587803",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "editCliente",
+            "url": "http://localhost3000/cliente/1",
+            "method": "PUT",
+            "sortNum": 275000,
+            "created": "2023-11-20T07:08:02.017Z",
+            "modified": "2023-11-20T07:08:02.017Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : 20,\n  \"genero\" : \"Masculino\",\n  \"edad\" : 20\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "fcb0c35e-7879-4238-b7a0-492352fe9fd5",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "addCliente2",
+            "url": "http://localhost3000/cliente",
+            "method": "POST",
+            "sortNum": 280000,
+            "created": "2023-11-20T07:08:02.014Z",
+            "modified": "2023-11-20T07:08:02.014Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luis\",\n  \"genero\" : 20,\n  \"edad\" : 20\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "99fe0287-65cc-4881-9816-d60cddebb8e8",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "editCliente2",
+            "url": "http://localhost3000/cliente/1",
+            "method": "PUT",
+            "sortNum": 285000,
+            "created": "2023-11-20T07:08:02.018Z",
+            "modified": "2023-11-20T07:08:02.018Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luis\",\n  \"genero\" : 20,\n  \"edad\" : 20\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "68a207ab-8808-4a75-8801-7c8c8fe2169c",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "addCliente3",
+            "url": "http://localhost3000/cliente",
+            "method": "POST",
+            "sortNum": 290000,
+            "created": "2023-11-20T07:08:02.015Z",
+            "modified": "2023-11-20T07:08:02.015Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luis\",\n  \"genero\" : \"masculino\",\n  \"edad\" : \"20\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "34fde2f9-cba8-40db-a0b9-232f04d8736b",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "editCliente3",
+            "url": "http://localhost3000/cliente/1",
+            "method": "PUT",
+            "sortNum": 295000,
+            "created": "2023-11-20T07:08:02.019Z",
+            "modified": "2023-11-20T07:08:02.019Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luis\",\n  \"genero\" : \"masculino\",\n  \"edad\" : \"20\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "b8ec614a-2eff-4353-944d-692ed4dc6638",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "editCliente4",
+            "url": "http://localhost3000/cliente/1",
+            "method": "PUT",
+            "sortNum": 295625,
+            "created": "2023-11-20T07:08:02.023Z",
+            "modified": "2023-11-20T07:08:02.023Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"\",\n  \"genero\" : \"masculino\",\n  \"edad\" : \"20\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "ef13771c-7080-466b-af2e-14bfc97ac664",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "editCliente5",
+            "url": "http://localhost3000/cliente/1",
+            "method": "PUT",
+            "sortNum": 296250,
+            "created": "2023-11-20T07:08:02.022Z",
+            "modified": "2023-11-20T07:08:02.022Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombreCliente\" : \"Luis\",\n  \"genero\" : \"\",\n  \"edad\" : 20\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "60304e27-369c-497c-b90f-72e4d57a2430",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "708a9e60-38f4-4aff-8d1e-40ab3531f993",
+            "name": "deleteCliente",
+            "url": "http://localhost3000/cliente/hrh",
+            "method": "DELETE",
+            "sortNum": 300000,
+            "created": "2023-11-20T07:08:02.016Z",
+            "modified": "2023-11-20T07:08:02.016Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "e8e9059f-8171-4b85-bb72-3a7c4b264b01",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "35f93da4-97bd-4ef9-bb78-2422be97a13d",
+            "name": "getProducto",
+            "url": "http://localhost:3000/producto",
+            "method": "GET",
+            "sortNum": 310000,
+            "created": "2023-11-20T07:08:02.020Z",
+            "modified": "2023-11-20T08:08:09.097Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "1ad12d85-5baf-4bd1-94fd-53e5b3573763",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "35f93da4-97bd-4ef9-bb78-2422be97a13d",
+            "name": "getProductoId",
+            "url": "http://localhost:3000/producto/655b1828966b6b1ef8b0db54",
+            "method": "GET",
+            "sortNum": 315000,
+            "created": "2023-11-20T07:08:02.037Z",
+            "modified": "2023-11-20T08:33:33.846Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "f3eac306-837f-470d-a966-edb320d43713",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "35f93da4-97bd-4ef9-bb78-2422be97a13d",
+            "name": "addProducto",
+            "url": "http://localhost:3000/producto",
+            "method": "POST",
+            "sortNum": 320000,
+            "created": "2023-11-20T07:08:02.021Z",
+            "modified": "2023-11-20T08:34:49.111Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"proteisna\",\n  \"precio\" : 70,\n  \"nombre\" : \"whey\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "d71733b6-1d71-4b22-95fc-9949a7bf9bfb",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "35f93da4-97bd-4ef9-bb78-2422be97a13d",
+            "name": "editProducto",
+            "url": "http://localhost:3000/producto/655b1828966b6b1ef8b0db54",
+            "method": "PUT",
+            "sortNum": 350000,
+            "created": "2023-11-20T07:08:02.024Z",
+            "modified": "2023-11-20T08:58:58.353Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"creatina\",\n  \"precio\" : 20,\n  \"nombre\" : \"whey\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "ae79c915-e1e0-4ee0-9d36-cc7c949b102c",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "35f93da4-97bd-4ef9-bb78-2422be97a13d",
+            "name": "deleteProducto",
+            "url": "http://localhost:3000/producto/655b13d399c3f526228316e0",
+            "method": "DELETE",
+            "sortNum": 360000,
+            "created": "2023-11-20T07:08:02.025Z",
+            "modified": "2023-11-20T08:37:00.845Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "e7a96fd5-a7c4-4ec4-9814-7411039399fe",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "getProducto",
+            "url": "http://localhost:3000/producto/655b1828966b6b1ef8b0db5d",
+            "method": "GET",
+            "sortNum": 370000,
+            "created": "2023-11-20T07:08:02.026Z",
+            "modified": "2023-11-20T08:47:04.426Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "29ffb476-5aca-4e52-bc93-1fda5d7e8644",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "addProducto",
+            "url": "http://localhost:3000/producto",
+            "method": "POST",
+            "sortNum": 380000,
+            "created": "2023-11-20T07:08:02.027Z",
+            "modified": "2023-11-20T08:48:01.750Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"\",\n  \"precio\" : 70,\n  \"nombre\" : \"whey\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "85bd71ed-d362-4429-9c91-4d28759819f1",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "addProducto2",
+            "url": "http://localhost:3000/producto",
+            "method": "POST",
+            "sortNum": 390000,
+            "created": "2023-11-20T07:08:02.028Z",
+            "modified": "2023-11-20T08:48:09.423Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"proteina\",\n  \"precio\" : 70,\n  \"nombre\" : \"\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "d5456c44-55d9-4ae0-ad8e-8158ac3963a5",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "addProducto3",
+            "url": "http://localhost:3000/producto",
+            "method": "POST",
+            "sortNum": 400000,
+            "created": "2023-11-20T07:08:02.029Z",
+            "modified": "2023-11-20T08:51:17.611Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"aminoacidos\",\n  \"precio\" : \"70s\",\n  \"nombre\" : \"whey\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "0a3c712f-a25a-4168-aa18-2c1c2dc91dd3",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "addProducto4",
+            "url": "http://localhost:3000/producto",
+            "method": "POST",
+            "sortNum": 405000,
+            "created": "2023-11-20T07:08:02.030Z",
+            "modified": "2023-11-20T08:51:47.325Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : 70,\n  \"precio\" : 70,\n  \"nombre\" : \"whey\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "9e1f4d96-bc74-45c5-9848-7af1687bba7d",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "addProducto5",
+            "url": "http://localhost:3000/producto",
+            "method": "POST",
+            "sortNum": 407500,
+            "created": "2023-11-20T07:08:02.031Z",
+            "modified": "2023-11-20T08:51:58.026Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"proteina\",\n  \"precio\" : 70,\n  \"nombre\" : 70\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "ad1aa7a4-6909-4c09-8c4d-570ce86341ab",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "editProducto",
+            "url": "http://localhost:3000/producto/655b1828966b6b1ef8b0db5d",
+            "method": "PUT",
+            "sortNum": 417500,
+            "created": "2023-11-20T07:08:02.032Z",
+            "modified": "2023-11-20T08:53:46.662Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"\",\n  \"precio\" : 70,\n  \"nombre\" : \"whey\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "925fee48-09fb-4d7b-9f9d-1bf3b0275404",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "editProducto2",
+            "url": "http://localhost:3000/producto/655b1828966b6b1ef8b0db5d",
+            "method": "PUT",
+            "sortNum": 422500,
+            "created": "2023-11-20T07:08:02.034Z",
+            "modified": "2023-11-20T08:53:56.851Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"creatina\",\n  \"precio\" : \"90s\",\n  \"nombre\" : \"isolada\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "e3c5f55b-35e7-4ae3-897e-b19d3a38dcc8",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "editProducto3",
+            "url": "http://localhost:3000/producto/655b1828966b6b1ef8b0db5d",
+            "method": "PUT",
+            "sortNum": 425000,
+            "created": "2023-11-20T07:08:02.035Z",
+            "modified": "2023-11-20T08:54:46.740Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"creatina\",\n  \"precio\" : 70,\n  \"nombre\" : \"\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "f249ec43-520a-4727-b3b0-76a4c2932608",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "editProducto4",
+            "url": "http://localhost:3000/producto/655b1828966b6b1ef8b0db5d",
+            "method": "PUT",
+            "sortNum": 426250,
+            "created": "2023-11-20T07:08:02.036Z",
+            "modified": "2023-11-20T08:55:05.133Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : \"creatina\",\n  \"precio\" : 70,\n  \"nombre\" : 70\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "4b041935-bb0d-4379-8450-b47bc0040b15",
+            "colId": "66aca274-6af2-4041-8151-0bfde4cadee9",
+            "containerId": "f1a2cc3f-7f91-48f6-9d3e-7acbf8a12df0",
+            "name": "editProducto5",
+            "url": "http://localhost:3000/producto/655b1828966b6b1ef8b0db5d",
+            "method": "PUT",
+            "sortNum": 427500,
+            "created": "2023-11-20T07:08:02.033Z",
+            "modified": "2023-11-20T08:56:11.048Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipoProducto\" : 70,\n  \"precio\" : 70,\n  \"nombre\" : \"isolada\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        }
+    ]
+}
