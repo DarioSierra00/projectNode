@@ -54,14 +54,20 @@ const editProduct = async (req,res) =>{
     }
 }
 
-const deleteProduct = async (req,res) =>{
+
+const deleteProduct = async (req, res) => {
     const id = req.params.id;
-    
     try {
-        const producto = await Producto.findByIdAndDelete(id)
-        res.status(200).json(producto)
+        if(id){
+            const productoDel = await Producto.findByIdAndDelete(id);
+            if(productoDel != null){
+                res.status(200).json(productoDel);
+            }else{
+                res.status(400).json("Id errónea")
+            }
+        }
     } catch (error) {
-        res.status(500).json({message : error})
+        res.status(404).json({msg:error.message})
     }
 }
 

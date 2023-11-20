@@ -7,7 +7,7 @@ const addMarca = async (req,res) =>{
 
     try {
         await newMarca.save();
-        res.status(201).json(newMarca)
+        res.status(200).json(newMarca)
     } catch (error) {
         res.status(500).json({message : error})
     }
@@ -16,6 +16,8 @@ const addMarca = async (req,res) =>{
 const getMarca = async (req,res) =>{
     try {
         const marca = await Marca.find()
+        res.status(200).json(marca)
+
     } catch (error) {
         res.status(500).json({message : error})
     }
@@ -25,9 +27,14 @@ const getMarcaById = async (req,res) =>{
     const id = req.params.id;
     try {
         const marca = await Marca.findById(id)
+        if(marca){
+            res.status(200).json(marca)
+        }
+        else{
+            res.status(400).json("Id errónea")
+        }
     } catch (error) {
         res.status(500).json({message : error})
-
     }
 }
 
@@ -35,12 +42,13 @@ const editMarca = async (req,res) =>{
     const id = req.params.id;
     const body = req.body;
     try {
-        if(id && body){
-            await Marca.findByIdAndUpdate(id,body);
-            const marcaActualizada = await getMarcaById(id)
-            res.status(200).json(marcaActualizada)
+        const marcaEditado = await Marca.findByIdAndUpdate(id,body);
+        if(marcaEditado){
+            res.status(200).json(marcaEditado)
         }
-        
+        else{
+            res.status(400).json("Id errónea")
+        }
     } catch (error) {
         res.status(500).json({message : error})
     }
@@ -48,9 +56,15 @@ const editMarca = async (req,res) =>{
 
 const deleteMarca = async (req,res) =>{
     const id = req.params.id;
-    
     try {
-        await Marca.findByIdAndDelete(id)
+        if(id){
+            const marcaDel = await Marca.findByIdAndDelete(id);
+            if(marcaDel != null){
+                res.status(200).json(marcaDel);
+            }else{
+                res.status(400).json("Id errónea")
+            }
+        }
     } catch (error) {
         res.status(500).json({message : error})
     }

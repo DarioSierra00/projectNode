@@ -7,7 +7,7 @@ const addCliente = async (req,res) =>{
 
     try {
         await newCliente.save();
-        res.status.json(201).json(newCliente)
+        res.status(201).json(newCliente)
     } catch (error) {
         res.status(500).json({message : error})
     }
@@ -16,6 +16,7 @@ const addCliente = async (req,res) =>{
 const getCliente = async (req,res) =>{
     try {
         const cliente = await Cliente.find()
+        res.status(200).json(cliente)
     } catch (error) {
         res.status(500).json({message : error})
     }
@@ -25,6 +26,12 @@ const getClienteById = async (req,res) =>{
     const id = req.params.id;
     try {
         const cliente = await Cliente.findById(id)
+        if(cliente){
+            res.status(200).json(cliente)
+        }
+        else{
+            res.status(400).json("Id errónea")
+        }
     } catch (error) {
         res.status(500).json({message : error})
 
@@ -35,23 +42,27 @@ const editCliente = async (req,res) =>{
     const id = req.params.id;
     const body = req.body;
     try {
-        if(id && body){
-            await Cliente.findByIdAndUpdate(id,body);
+        const clienteEditado = await Cliente.findByIdAndUpdate(id,body);
+        if(clienteEditado){
+            res.status(200).json(clienteEditado)
         }
-        
+        else{
+            res.status(400).json("Id errónea")
+        }
     } catch (error) {
         res.status(500).json({message : error})
     }
 }
 
-const deleteMarca = async (req,res) =>{
+const deleteCliente = async (req,res) =>{
     const id = req.params.id;
     
     try {
-        await Cliente.findByIdAndDelete(id)
+        const cliente = await Cliente.findByIdAndDelete(id)
+        res.status(200).json(cliente)
     } catch (error) {
         res.status(500).json({message : error})
     }
 }
 
-module.exports = {getCliente,getClienteById,addCliente,editCliente,deleteMarca}
+module.exports = {getCliente,getClienteById,addCliente,editCliente,deleteCliente}

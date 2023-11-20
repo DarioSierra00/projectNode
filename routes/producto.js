@@ -37,7 +37,7 @@ router
 
 
 .delete([
-
+    check('id','no es un id valido').isMongoId()
 ],deleteProduct)
 
 module.exports = router;
