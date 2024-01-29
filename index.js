@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 require('dotenv').config();
+const cors = require('cors');
 
 const app = express();
-
+app.use(cors())
 const useRouteProduct = require('./routes/producto');
 const useRouteClient = require('./routes/clientes')
 const useRouteMarca = require('./routes/marca');

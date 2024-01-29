@@ -3,6 +3,7 @@ const { getCliente, addCliente, getClienteById, editCliente, deleteCliente } = r
 const { route } = require('./producto')
 const { validateFields } = require('../middlewares/validation-fields')
 const { check } = require('express-validator')
+const {existsEmail} = require('../helpers/dbValidators')
 const router = express.Router()
 
 router
@@ -14,8 +15,9 @@ router
     check('nombreCliente','El nombreCliente no debe estar vacío').notEmpty(),
     check('nombreCliente','El nombreCliente debe ser un string').isString(),
     check('edad','El edad debe ser un numero').isInt(),
-    check('genero','El genero no debe estar vacío').notEmpty(),
-    check('genero','El genero no debe estar vacío').isString(),
+    check('email','El genero no debe estar vacío').notEmpty(),
+    check('email','El genero no debe estar vacío').isString(),
+    check('email').custom(existsEmail),
     validateFields
 ],addCliente)
 
@@ -31,8 +33,9 @@ router
     check('nombreCliente','El nombreCliente no debe estar vacío').notEmpty(),
     check('nombreCliente','El nombreCliente debe ser un string').isString(),
     check('edad','El edad debe ser un numero').isInt(),
-    check('genero','El genero no debe estar vacío').notEmpty(),
-    check('genero','El genero no debe estar vacío').isString(),
+    check('email','El genero no debe estar vacío').notEmpty(),
+    check('email','El genero no debe estar vacío').isString(),
+    check('email').custom(existsEmail),
     validateFields
 ],editCliente)
 
