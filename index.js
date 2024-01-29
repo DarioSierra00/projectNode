@@ -9,6 +9,7 @@ app.use(cors())
 const useRouteProduct = require('./routes/producto');
 const useRouteClient = require('./routes/clientes')
 const useRouteMarca = require('./routes/marca');
+const useRouteUser = require("./routes/usuario");
 const morgan = require('morgan');
 mongoose.set('strictQuery',false);
 
@@ -23,6 +24,7 @@ app.use(morgan('dev'));
 app.use('/producto',useRouteProduct);
 app.use('/clientes',useRouteClient);
 app.use('/marca', useRouteMarca)
+app.use("/usuario",useRouteUser)
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
