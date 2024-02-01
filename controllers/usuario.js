@@ -2,8 +2,11 @@ const User = require("../models/usuario")
 
 const addUser = async (req,res) =>{
     const user = req.body;
+    const bcryptjs = require("bcryptjs")
 
-    const newUser = new User(user)
+    const salt = bcryptjs.genSaltSync();
+    encryptedPassword = bcryptjs.hashSync( user.password, salt);
+    const newUser = new User({email : user.email, username : user.username, name : user.name, role : "USER_ROLE", password : encryptedPassword, active : true})
 
     try {
         await newUser.save();
