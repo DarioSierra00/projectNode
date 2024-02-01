@@ -1,8 +1,8 @@
 const User = require("../models/usuario")
+const bcryptjs = require("bcryptjs")
 
 const addUser = async (req,res) =>{
     const user = req.body;
-    const bcryptjs = require("bcryptjs")
 
     const salt = bcryptjs.genSaltSync();
     encryptedPassword = bcryptjs.hashSync( user.password, salt);
@@ -68,4 +68,25 @@ const deleteUser = async (req,res) =>{
     }
 }
 
-module.exports = {addUser,getUser,getUserById,editUser,deleteUser}
+const login = async (req,res) =>{
+    const {password,email} = req.body
+    
+    try{
+        const user = await User.findOne({email})
+        console.log(user.email)
+        if(user){
+            const validPassword = bcryptjs.compareSync(password, user.password);
+            if(validPassword){
+                res.status(200).json(user)
+            }
+            else{
+                res.status(404).json("Password no valida o email mal")
+            }
+        }
+    }catch (error){
+        console.log(error)
+        res.status(500).json({message : error})
+    }
+}
+
+module.exports = {addUser,getUser,getUserById,editUser,deleteUser,login}
