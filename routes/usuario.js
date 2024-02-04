@@ -14,12 +14,10 @@ router
     check('email','El email debe ser un string').isString(),
     check('username','El username debe ser string').isString(),
     check('name','El nombre no debe estar vacío').isString(),
-    check('role','El role no debe estar vacío').isString(),
     check('password','El password no debe estar vacío').isString(),
     check('password','El password debe tener un formato valido').matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"),
     check('email').custom(existsEmailUsuario),
     check('username').custom(existsUsername),
-    check("active", "Debe ser true o false").isBoolean(),
     validateFields
 ],addUser)
 
